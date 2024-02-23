@@ -138,14 +138,14 @@ function FeedbackDetails() {
                     <span>
                       <PhoneCallbackRoundedIcon />
                     </span>
-                    <span className="p-2">{item.contact}</span>
+                    <span className="p-2">{item.phone}</span>
                   </li>
                   <hr className="m-0" />
                   <li>
                     <samp>
                       <Diversity3RoundedIcon />
                     </samp>
-                    <span className="p-2">{item.comment}</span>
+                    <span className="p-2">{item.message}</span>
                   </li>
                 </ul>
               </div>
