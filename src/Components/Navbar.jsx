@@ -49,12 +49,12 @@ function Navbar() {
               </li>
               <li class="nav-item">
                 <a class="nav-link " href="#">
-                  Contact
+                  Contact Us
                 </a>
               </li>
               <li class="nav-item">
                 <Link class="nav-link " to="/feedbackDetails">
-                  feedback-details
+                  Feedbacks
                 </Link>
               </li>
             </ul>

@@ -112,7 +112,7 @@ function FeedbackDetails() {
 
   return (
     <div>
-      <h1 className="card-section">Feedback details</h1>
+      <h1 className="card-section">Feedbacks</h1>
       <div className="containers">
         <div className="row">
           <div className="d-flex flex-wrap">
