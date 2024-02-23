@@ -15,9 +15,7 @@ function Navbar() {
               height="30"
               class="d-inline-block align-text-top mx-2"
             />
-            <Link class="nav-link active" aria-current="page" to="/feedback">
-              Feedback
-            </Link>
+            Feedback
           </a>
           <button
             class="navbar-toggler"
