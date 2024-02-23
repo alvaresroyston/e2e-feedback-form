@@ -3,6 +3,7 @@ import imgs from "./feedback.gif";
 import "react-toastify/dist/ReactToastify.css";
 // import { v4 as uuidv4 } from "uuid";
 import toast, { Toaster } from "react-hot-toast";
+// require('dotenv');
 
 function Feedback() {
   const [formData, setFormData] = useState({
@@ -99,10 +100,10 @@ function Feedback() {
     }
 
     setErrors(newErrors);
-
     if (isValid) {
       try {
-        const response = await fetch("https://02d9-119-82-111-214.ngrok-free.app/feedbacks", {
+        
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/feedbacks`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
