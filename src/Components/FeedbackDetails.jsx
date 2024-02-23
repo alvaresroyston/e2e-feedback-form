@@ -4,99 +4,109 @@ import PhoneCallbackRoundedIcon from "@mui/icons-material/PhoneCallbackRounded";
 import Diversity3RoundedIcon from "@mui/icons-material/Diversity3Rounded";
 import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
-const data = [
-  {
-    name: "janmenjaya",
-    email: "janmnejay@gamail.com",
-    contact: "7377617717",
-    comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-  },
-  {
-    name: "sunil",
-    email: "sunil@gamail.com",
-    contact: "7377617717",
-    comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-  },
-  {
-    name: "shafi",
-    email: "shafi@gamail.com",
-    contact: "7377617717",
-    comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-  },
-  {
-    name: "roy",
-    email: "roy@gamail.com",
-    contact: "7377617717",
-    comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-  },
-  {
-    name: "adi",
-    email: "adi@gamail.com",
-    contact: "7377617717",
-    comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-  },
-  {
-    name: "manav",
-    email: "manav@gamail.com",
-    contact: "7377617717",
-    comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-  },
-  {
-    name: "boman",
-    email: "boman@gamail.com",
-    contact: "7377617717",
-    comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-  },
-  {
-    name: "kabir",
-    email: "kabir@gamail.com",
-    contact: "7377617717",
-    comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-  },
-  {
-    name: "w",
-    email: "w@gamail.com",
-    contact: "7377617717",
-    comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-  },
-  {
-    name: "w",
-    email: "w@gamail.com",
-    contact: "7377617717",
-    comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-  },
-  {
-    name: "w",
-    email: "w@gamail.com",
-    contact: "7377617717",
-    comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-  },
-  {
-    name: "w",
-    email: "w@gamail.com",
-    contact: "7377617717",
-    comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-  },
-  {
-    name: "w",
-    email: "w@gamail.com",
-    contact: "7377617717",
-    comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-  },
-];
+
+
+// const data = [
+//   {
+//     name: "janmenjaya",
+//     email: "janmnejay@gamail.com",
+//     contact: "7377617717",
+//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
+//   },
+//   {
+//     name: "sunil",
+//     email: "sunil@gamail.com",
+//     contact: "7377617717",
+//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
+//   },
+//   {
+//     name: "shafi",
+//     email: "shafi@gamail.com",
+//     contact: "7377617717",
+//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
+//   },
+//   {
+//     name: "roy",
+//     email: "roy@gamail.com",
+//     contact: "7377617717",
+//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
+//   },
+//   {
+//     name: "adi",
+//     email: "adi@gamail.com",
+//     contact: "7377617717",
+//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
+//   },
+//   {
+//     name: "manav",
+//     email: "manav@gamail.com",
+//     contact: "7377617717",
+//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
+//   },
+//   {
+//     name: "boman",
+//     email: "boman@gamail.com",
+//     contact: "7377617717",
+//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
+//   },
+//   {
+//     name: "kabir",
+//     email: "kabir@gamail.com",
+//     contact: "7377617717",
+//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
+//   },
+//   {
+//     name: "w",
+//     email: "w@gamail.com",
+//     contact: "7377617717",
+//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
+//   },
+//   {
+//     name: "w",
+//     email: "w@gamail.com",
+//     contact: "7377617717",
+//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
+//   },
+//   {
+//     name: "w",
+//     email: "w@gamail.com",
+//     contact: "7377617717",
+//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
+//   },
+//   {
+//     name: "w",
+//     email: "w@gamail.com",
+//     contact: "7377617717",
+//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
+//   },
+//   {
+//     name: "w",
+//     email: "w@gamail.com",
+//     contact: "7377617717",
+//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
+//   },
+// ];
 
 function FeedbackDetails() {
 
-  // const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
-  // useEffect(()=>{
-  //   const fetchData = async ()=>{
-  //     const newData = await fetch("https://02d9-119-82-111-214.ngrok-free.app/feedbacks");
-  //     const parsedData = await newData.json();
-  //     console.log("Working", parsedData);
-  //   }
-  //   fetchData();
-  // },[])
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://zany-gold-ladybug-hat.cyclic.app/feedbacks"
+        );
+        const fetchedData = await response.json();
+        setData(fetchedData);
+        console.log(fetchedData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   
 
