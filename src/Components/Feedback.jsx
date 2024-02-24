@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import imgs from "./feedback.gif";
 import "react-toastify/dist/ReactToastify.css";
-// import { v4 as uuidv4 } from "uuid";
 import toast, { Toaster } from "react-hot-toast";
-// require('dotenv');
 
 function Feedback() {
   const [formData, setFormData] = useState({
@@ -18,9 +16,8 @@ function Feedback() {
     const { name, value } = e.target;
 
     if (name === "phone") {
-      // Only allow digits
       const newValue = value.replace(/\D/g, "");
-      // Limit to 10 digits
+
       const trimmedValue = newValue.slice(0, 10);
       const isValidPhone = trimmedValue.length === 10;
 
@@ -29,7 +26,6 @@ function Feedback() {
         [name]: trimmedValue,
       });
 
-      // Persist error message if phone number is not valid
       if (!isValidPhone) {
         setErrors((prevErrors) => ({
           ...prevErrors,
@@ -100,6 +96,7 @@ function Feedback() {
     }
 
     setErrors(newErrors);
+
     if (isValid) {
       try {
         
@@ -117,22 +114,9 @@ function Feedback() {
 
         const data = await response.json();
 
-        // Handle success (e.g., show toast or redirect user)
         console.log("Feedback submitted successfully:", data);
         toast.success("Feedback submitted successfully");
 
-        // {
-        //   duration: 4000,
-        //   style: {
-        //     height: "100px",
-        //     background: "linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)",
-        //     color: "#fff",
-        //     fontWeight: "bolder",
-        //     position: "top-center",
-        //   },
-        // }
-
-        // Clear form fields
         setFormData({
           name: "",
           email: "",
@@ -140,7 +124,6 @@ function Feedback() {
           message: "",
         });
       } catch (error) {
-        // Handle error (e.g., show error message)
         console.error("Error submitting feedback:", error);
         toast.error("Failed to submit feedback. Please try again later.");
       }

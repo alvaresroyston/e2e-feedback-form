@@ -5,88 +5,6 @@ import Diversity3RoundedIcon from "@mui/icons-material/Diversity3Rounded";
 import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
 
-
-// const data = [
-//   {
-//     name: "janmenjaya",
-//     email: "janmnejay@gamail.com",
-//     contact: "7377617717",
-//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-//   },
-//   {
-//     name: "sunil",
-//     email: "sunil@gamail.com",
-//     contact: "7377617717",
-//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-//   },
-//   {
-//     name: "shafi",
-//     email: "shafi@gamail.com",
-//     contact: "7377617717",
-//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-//   },
-//   {
-//     name: "roy",
-//     email: "roy@gamail.com",
-//     contact: "7377617717",
-//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-//   },
-//   {
-//     name: "adi",
-//     email: "adi@gamail.com",
-//     contact: "7377617717",
-//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-//   },
-//   {
-//     name: "manav",
-//     email: "manav@gamail.com",
-//     contact: "7377617717",
-//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-//   },
-//   {
-//     name: "boman",
-//     email: "boman@gamail.com",
-//     contact: "7377617717",
-//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-//   },
-//   {
-//     name: "kabir",
-//     email: "kabir@gamail.com",
-//     contact: "7377617717",
-//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-//   },
-//   {
-//     name: "w",
-//     email: "w@gamail.com",
-//     contact: "7377617717",
-//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-//   },
-//   {
-//     name: "w",
-//     email: "w@gamail.com",
-//     contact: "7377617717",
-//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-//   },
-//   {
-//     name: "w",
-//     email: "w@gamail.com",
-//     contact: "7377617717",
-//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-//   },
-//   {
-//     name: "w",
-//     email: "w@gamail.com",
-//     contact: "7377617717",
-//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-//   },
-//   {
-//     name: "w",
-//     email: "w@gamail.com",
-//     contact: "7377617717",
-//     comment: "khjgkhfs hagkjghkj fkjadsghkja kngdkhadskgh kfhka",
-//   },
-// ];
-
 function FeedbackDetails() {
 
   const [data, setData] = useState([]);
@@ -108,8 +26,6 @@ function FeedbackDetails() {
     fetchData();
   }, []);
 
-  
-
   return (
     <div>
       <h1 className="card-section">Feedbacks</h1>
@@ -122,7 +38,7 @@ function FeedbackDetails() {
                   <h4 className="d-flex justify-content-between  align-items-center">
                     {item.name}
                     <span className="delete-button">
-                      <IconButton color="error">
+                      <IconButton onClick={handleDelete} color="error">
                         <DeleteIcon />
                       </IconButton>
                     </span>
