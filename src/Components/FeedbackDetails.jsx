@@ -6,7 +6,6 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
 
 function FeedbackDetails() {
-
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -26,6 +25,26 @@ function FeedbackDetails() {
     fetchData();
   }, []);
 
+  const handleDelete = async (id) => {
+    try {
+      const response = await fetch(
+        `https://zany-gold-ladybug-hat.cyclic.app/feedbacks/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
+      if (response.ok) {
+        // If deletion is successful, update the state to remove the deleted feedback
+        setData(data.filter((item) => item._id !== id));
+        console.log("Feedback deleted successfully");
+      } else {
+        console.error("Failed to delete feedback");
+      }
+    } catch (error) {
+      console.error("Error deleting feedback:", error);
+    }
+  };
+
   return (
     <div>
       <h1 className="card-section">Feedbacks</h1>
@@ -38,7 +57,10 @@ function FeedbackDetails() {
                   <h4 className="d-flex justify-content-between  align-items-center">
                     {item.name}
                     <span className="delete-button">
-                      <IconButton onClick={handleDelete} color="error">
+                      <IconButton
+                        onClick={() => handleDelete(item._id)}
+                        color="error"
+                      >
                         <DeleteIcon />
                       </IconButton>
                     </span>
