@@ -18,7 +18,7 @@ function FeedbackDetails() {
         setData(fetchedData);
         console.log(fetchedData);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        toast.error("Error fetching data:", error);
       }
     };
 
@@ -34,14 +34,13 @@ function FeedbackDetails() {
         }
       );
       if (response.ok) {
-        // If deletion is successful, update the state to remove the deleted feedback
         setData(data.filter((item) => item._id !== id));
-        console.log("Feedback deleted successfully");
+        toast.success("Feedback deleted successfully");
       } else {
-        console.error("Failed to delete feedback");
+        toast.error("Failed to delete feedback");
       }
     } catch (error) {
-      console.error("Error deleting feedback:", error);
+      tosat.error("Error deleting feedback:", error);
     }
   };
 
