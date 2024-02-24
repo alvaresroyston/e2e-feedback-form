@@ -4,6 +4,8 @@ import PhoneCallbackRoundedIcon from "@mui/icons-material/PhoneCallbackRounded";
 import Diversity3RoundedIcon from "@mui/icons-material/Diversity3Rounded";
 import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
+import "react-toastify/dist/ReactToastify.css";
+import toast, { Toaster } from "react-hot-toast";
 
 function FeedbackDetails() {
   const [data, setData] = useState([]);
@@ -89,6 +91,7 @@ function FeedbackDetails() {
           </div>
         </div>
       </div>
+      <Toaster/>
     </div>
   );
 }
