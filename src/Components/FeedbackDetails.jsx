@@ -58,10 +58,9 @@ function FeedbackDetails() {
                     {item.name}
                     <span className="delete-button">
                       <IconButton
-                        onClick={() => handleDelete(item._id)}
                         color="error"
                       >
-                        <DeleteIcon />
+                        <DeleteIcon onClick={() => handleDelete(item._id)} />
                       </IconButton>
                     </span>
                   </h4>
