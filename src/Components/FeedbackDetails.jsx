@@ -37,12 +37,12 @@ function FeedbackDetails() {
       );
       if (response.ok) {
         setData(data.filter((item) => item._id !== id));
-        toast.success("Feedback deleted successfully");
+        console.log("Feedback deleted successfully");
       } else {
         toast.error("Failed to delete feedback");
       }
     } catch (error) {
-      tosat.error("Error deleting feedback:", error);
+      toast.error("Error deleting feedback:", error);
     }
   };
 
@@ -58,9 +58,7 @@ function FeedbackDetails() {
                   <h4 className="d-flex justify-content-between  align-items-center">
                     {item.name}
                     <span className="delete-button">
-                      <IconButton
-                        color="error"
-                      >
+                      <IconButton color="error">
                         <DeleteIcon onClick={() => handleDelete(item._id)} />
                       </IconButton>
                     </span>
@@ -91,7 +89,7 @@ function FeedbackDetails() {
           </div>
         </div>
       </div>
-      <Toaster/>
+      <Toaster />
     </div>
   );
 }
