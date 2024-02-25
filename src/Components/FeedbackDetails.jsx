@@ -15,7 +15,7 @@ function FeedbackDetails() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://16.171.254.159:4404/feedbacks"
+          `${process.env.REACT_APP_API_URL}/feedbacks`
         );
         const fetchedData = await response.json();
         setData(fetchedData);
@@ -31,7 +31,7 @@ function FeedbackDetails() {
   const handleDelete = async (id) => {
     try {
       const response = await fetch(
-        `http://16.171.254.159:4404/feedbacks/${id}`,
+        `${process.env.REACT_APP_API_URL}/feedbacks/${id}`,
         {
           method: "DELETE",
         }
