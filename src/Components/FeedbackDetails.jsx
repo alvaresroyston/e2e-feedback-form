@@ -6,6 +6,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
 import "react-toastify/dist/ReactToastify.css";
 import toast, { Toaster } from "react-hot-toast";
+// import { ToastContainer, toast } from "react-toastify";
 
 function FeedbackDetails() {
   const [data, setData] = useState([]);
@@ -14,7 +15,7 @@ function FeedbackDetails() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://zany-gold-ladybug-hat.cyclic.app/feedbacks"
+          "http://16.171.254.159:4404/feedbacks"
         );
         const fetchedData = await response.json();
         setData(fetchedData);
@@ -30,13 +31,14 @@ function FeedbackDetails() {
   const handleDelete = async (id) => {
     try {
       const response = await fetch(
-        `https://zany-gold-ladybug-hat.cyclic.app/feedbacks/${id}`,
+        `http://16.171.254.159:4404/feedbacks/${id}`,
         {
           method: "DELETE",
         }
       );
       if (response.ok) {
         setData(data.filter((item) => item._id !== id));
+        toast.success("Feedback deleted successfully");
       } else {
         toast.error("Failed to delete feedback");
       }
@@ -44,7 +46,6 @@ function FeedbackDetails() {
       toast.error("Error deleting feedback:", error);
     }
   };
-  toast.success("Feedback deleted successfully");
 
   return (
     <div>
@@ -58,9 +59,7 @@ function FeedbackDetails() {
                   <h4 className="d-flex justify-content-between  align-items-center">
                     {item.name}
                     <span className="delete-button">
-                      <IconButton
-                        color="error"
-                      >
+                      <IconButton color="error">
                         <DeleteIcon onClick={() => handleDelete(item._id)} />
                       </IconButton>
                     </span>
@@ -91,7 +90,7 @@ function FeedbackDetails() {
           </div>
         </div>
       </div>
-      <Toaster/>
+      <Toaster />
     </div>
   );
 }

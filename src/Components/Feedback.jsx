@@ -113,7 +113,6 @@ function Feedback() {
         }
 
         const data = await response.json();
-
         console.log("Feedback submitted successfully:", data);
         toast.success("Feedback submitted successfully");
 
